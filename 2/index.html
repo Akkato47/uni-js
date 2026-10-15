@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TodoList</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="phone">
+    <section id="list-screen">
+      <ul id="tasks"></ul>
+      <div id="empty">
+        <div class="clipboard"><span>✓</span><span>□</span><span>□</span></div>
+        <p>Add a task to get started</p>
+      </div>
+      <button id="add" class="round" aria-label="Создать задачу">+</button>
+    </section>
+    <section id="modal" hidden>
+      <form id="task-form">
+        <div class="toolbar">
+          <button type="button" id="back" aria-label="Назад">←</button>
+          <button type="submit" aria-label="Сохранить">✓</button>
+        </div>
+        <textarea id="task-text" placeholder="Add New Task..." aria-label="Текст задачи" maxlength="500" required></textarea>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

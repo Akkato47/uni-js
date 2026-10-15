@@ -1,0 +1,27 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: #ddd; display: grid; place-items: center; font: 16px Arial, sans-serif; color: #222; }
+button, input { font: inherit; }
+button { border: 0; cursor: pointer; color: inherit; }
+.phone { width: 320px; max-width: 100%; height: 660px; background: #f7f8fa; border: 1px solid #bbb; border-radius: 25px; padding: 22px 14px; }
+h1 { font-size: 16px; text-align: center; margin: 12px 0 24px; }
+.card { background: white; padding: 10px; border-radius: 16px; margin: 10px 0; box-shadow: 0 8px 20px #00000012; }
+.currency { width: 100%; display: flex; align-items: center; justify-content: space-between; background: transparent; text-align: left; padding: 0 0 10px; }
+b { display: block; font-size: 19px; }
+small { display: block; font-size: 12px; }
+.currency > span:last-child { font-size: 30px; }
+.amount { background: #f0f1f3; width: 100%; padding: 10px 4px; border-radius: 9px; font-size: 24px; overflow-wrap: anywhere; }
+.active, .actions button, .tick { color: #00c572; }
+.note { color: #888; font-size: 11px; text-align: center; margin: 15px 0; }
+.actions, .keyboard { display: grid; gap: 6px; }
+.actions { grid-template-columns: 1fr 1fr; margin-bottom: 6px; }
+.keyboard { grid-template-columns: repeat(3, 1fr); }
+.actions button, .keyboard button { background: white; height: 55px; border-radius: 16px; font-size: 24px; box-shadow: 0 8px 18px #00000009; }
+button:active { background: #e5e7ea; }
+.zero { grid-column: span 2; }
+[hidden] { display: none !important; }
+header { position: relative; }
+header button { position: absolute; top: -6px; left: 0; background: transparent; font-size: 26px; }
+#search { width: 100%; border: 0; border-bottom: 2px solid #aaa; background: transparent; padding: 12px 5px; outline-color: #00c572; margin-bottom: 15px; }
+#currencies { max-height: 495px; overflow-y: auto; }
+.option { width: 100%; border-radius: 15px; background: white; display: flex; text-align: left; align-items: center; justify-content: space-between; padding: 12px; margin-bottom: 8px; }
+.tick { font-size: 25px; }

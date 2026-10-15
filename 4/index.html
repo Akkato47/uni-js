@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TypingTest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><span class="logo">⌨</span> TypingTest</header>
+  <main>
+    <section id="test">
+      <div id="settings">
+        <button data-mode="time" class="active">◷ Время</button>
+        <button data-mode="words">А Слова</button>
+        <span class="divider"></span>
+        <div id="limits"></div>
+        <input id="custom-limit" type="number" min="1" max="1000" placeholder="Своё" aria-label="Своё количество">
+      </div>
+      <button id="start" class="yellow">Начать тест ›</button>
+      <div id="typing" hidden>
+        <div id="progress"></div>
+        <div id="text" aria-label="Текст для печати"></div>
+        <textarea id="input" aria-label="Введите показанный текст" autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>
+        <p id="hint">Нажмите на текст и печатайте</p>
+        <button id="restart">Заново ⟳</button>
+      </div>
+    </section>
+    <section id="result" hidden>
+      <div class="stats">
+        <div><small>тип теста</small><span id="result-mode"></span></div>
+        <div><small>cpm</small><span id="cpm"></span></div>
+        <div><small>точность</small><span id="accuracy"></span></div>
+        <div><small>символы</small><span id="characters"></span></div>
+        <div><small>ошибки</small><span id="errors"></span></div>
+      </div>
+      <div class="result-actions"><button id="again">Заново ⟳</button><button id="next" class="yellow">Следующий тест ›</button></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

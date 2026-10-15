@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Конвертер валют</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="phone">
+    <section id="converter">
+      <h1>Конвертер валют</h1>
+      <div class="card">
+        <button class="currency" data-field="0"><span><b id="code-0"></b><small id="name-0"></small></span><span>›</span></button>
+        <button class="amount active" id="amount-0" aria-label="Первая сумма"></button>
+      </div>
+      <div class="card">
+        <button class="currency" data-field="1"><span><b id="code-1"></b><small id="name-1"></small></span><span>›</span></button>
+        <button class="amount" id="amount-1" aria-label="Вторая сумма"></button>
+      </div>
+      <p class="note">Учебные фиксированные курсы</p>
+      <div class="actions"><button data-key="AC">AC</button><button data-key="back" aria-label="Удалить цифру">⌫</button></div>
+      <div class="keyboard">
+        <button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button>
+        <button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button>
+        <button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button>
+        <button data-key="0" class="zero">0</button><button data-key=",">,</button>
+      </div>
+    </section>
+    <section id="selector" hidden>
+      <header><button id="back" aria-label="Назад">←</button><h1>Изменить валюту</h1></header>
+      <input type="search" id="search" placeholder="Search currency..." aria-label="Поиск валюты">
+      <div id="currencies"></div>
+    </section>
+  </main>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

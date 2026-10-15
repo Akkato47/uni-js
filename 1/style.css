@@ -1,0 +1,109 @@
+:root {
+  --bg: #000;
+  --display: #fff;
+  --gray: #333;
+  --gray-hover: #444;
+  --light: #a5a5a5;
+  --light-hover: #bcbcbc;
+  --orange: #ff9f0a;
+  --orange-hover: #ffb43f;
+  --orange-active: #fff;
+  --gap: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body { height: 100%; }
+
+body {
+  background: #1c1c1e;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.phone {
+  width: 100%;
+  max-width: 360px;
+  background: var(--bg);
+  border-radius: 44px;
+  padding: 22px 18px 34px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
+}
+
+.display-wrap { position: relative; }
+
+.display {
+  color: var(--display);
+  text-align: right;
+  font-weight: 300;
+  font-size: clamp(56px, 22vw, 88px);
+  line-height: 1.1;
+  padding: 40px 12px 24px;
+  min-height: 140px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.display.mem::before {
+  content: "M";
+  position: absolute;
+  left: 34px;
+  color: var(--orange);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap);
+}
+
+button {
+  border: none;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: 400;
+  color: #fff;
+  cursor: pointer;
+  transition: filter .12s, background .12s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.num, .dot { background: var(--gray); }
+.num:hover, .dot:hover { background: var(--gray-hover); }
+
+.mem { background: var(--gray); font-size: 24px; }
+.mem:hover { background: var(--gray-hover); }
+
+.func { background: var(--light); color: #000; }
+.func:hover { background: var(--light-hover); }
+
+.op { background: var(--orange); font-size: 34px; }
+.op:hover { background: var(--orange-hover); }
+.op.active { background: var(--orange-active); color: var(--orange); }
+
+.zero {
+  grid-column: span 2;
+  aspect-ratio: auto;
+  border-radius: 40px;
+  justify-content: flex-start;
+  padding-left: 30px;
+}
+
+button:active { filter: brightness(1.3); }
